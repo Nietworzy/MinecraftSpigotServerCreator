@@ -1,0 +1,62 @@
+#!/usr/bin/env bash
+if [[ $1 == "" ]]
+then
+  echo "Please type name of folder to new Minecraft Server in one argument!"
+  exit 1
+else
+  mkdir $1
+  cd $1
+  touch eula.txt
+  touch server.properties
+  xdg-open https://cdn.getbukkit.org/spigot/spigot-1.16.3.jar
+  echo "Please rename your downloaded file name to jarg.jar and wait 10 seconds."
+  sleep 10
+  mv ~/Downloads/jarg.jar ./jarg.jar
+  echo "eula=true">eula.txt
+  echo "server-port: 25565">server.properties
+  echo "motd: A Minecraft Server">>server.properties
+  echo "difficulty=normal">>server.properties
+  echo "enable-query=false">>server.properties
+  echo "spawn-protection=26">>server.properties
+  echo "max-tick-time=60000">>server.properties
+  echo "gamemode=survival">>server.properties
+  echo "query.port=25565">>server.properties
+  echo "generator-settings=">>server.properties
+  echo "sync-chunk-writes=true">>server.properties
+  echo "force-gamemode=false">>server.properties
+  echo "enforce-whitelist=false">>server.properties
+  echo "pvp=true">>server.properties
+  echo "spawn-monsters=true">>server.properties
+  echo "allow-nether=true">>server.properties
+  echo "broadcast-console-to-ops=true">>server.properties
+  echo "entity-broadcast-range-percentage=100">>server.properties
+  echo "snooper-enabled=true">>server.properties
+  echo "hardcore=false">>server.properties
+  echo "player-idle-timeout=0">>server.properties
+  echo "level-type=default">>server.properties
+  echo "enable-status=true">>server.properties
+  echo "enable-command-block=true">>server.properties
+  echo "max-players=10000">>server.properties
+  echo "network-compression-threshold=256">>server.properties
+  echo "resource-pack-sha1=">>server.properties
+  echo "max-world-size=29999984">>server.properties
+  echo "function-permission-level=2">>server.properties
+  echo "rcon.port=25575">>server.properties
+  echo "debug=false">>server.properties
+  echo "spawn-npcs=true">>server.properties
+  echo "allow-flight=false">>server.properties
+  echo "level-name=world">>server.properties
+  echo "view-distance=10">>server.properties
+  echo "resource-pack=">>server.properties
+  echo "spawn-animals=true">>server.properties
+  echo "white-list=false">>server.properties
+  echo "rcon.password=">>server.properties
+  echo "generate-structures=true">>server.properties
+  echo "online-mode=true">>server.properties
+  echo "max-build-height=256">>server.properties
+  echo "level-seed=">>server.properties
+  echo "prevent-proxy-connections=false">>server.properties
+  echo "use-native-transport=true">>server.properties
+  echo "enable-jmx-monitoring=false">>server.properties
+  echo "enable-rcon=false">>server.properties
+fi
