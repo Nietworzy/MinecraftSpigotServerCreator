@@ -8,6 +8,7 @@ else
   cd $1
   touch eula.txt
   touch server.properties
+  # If you have laptop Mac change word xdg-open to open, but if you have Linux system operation, don't do anything about it.
   xdg-open https://cdn.getbukkit.org/spigot/spigot-1.16.3.jar
   echo "Please rename your downloaded file name to jarg.jar and wait 10 seconds."
   sleep 10
